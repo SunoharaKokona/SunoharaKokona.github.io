@@ -20,22 +20,33 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"kokona.zeabur.app","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false,"highlight_theme":"night bright"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="春原ココナ的博客">
-<meta property="og:url" content="http://kokona.zeabur.app/tags/zsh/index.html">
+    <meta name="description" content="Spaceship让你的终端更好看耐用 目标：用Spaceship让你的终端好用到飞起   -1.碎碎念我的上一篇博客推荐了oh-my-zsh加上Powerlevel10k的美化教程，但是Powerlevel10k已经太久时间没有更新了，所以今天给大家带来由rust语言编写的高性能shell美化工具Spaceship  0.亿点小准备卸载oh-my-zsh在个人文件夹下找到一切有关oh-my-zs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="spaceship">
+<meta property="og:url" content="http://kokona.zeabur.app/2025/07/26/spaceship/index.html">
 <meta property="og:site_name" content="春原ココナ的博客">
+<meta property="og:description" content="Spaceship让你的终端更好看耐用 目标：用Spaceship让你的终端好用到飞起   -1.碎碎念我的上一篇博客推荐了oh-my-zsh加上Powerlevel10k的美化教程，但是Powerlevel10k已经太久时间没有更新了，所以今天给大家带来由rust语言编写的高性能shell美化工具Spaceship  0.亿点小准备卸载oh-my-zsh在个人文件夹下找到一切有关oh-my-zs">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://kokona.zeabur.app/images/spaceship/2.1.png">
+<meta property="article:published_time" content="2025-07-26T15:13:21.000Z">
+<meta property="article:modified_time" content="2025-07-26T15:38:11.311Z">
 <meta property="article:author" content="春原ココナ">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="终端">
+<meta property="article:tag" content="zsh">
+<meta property="article:tag" content="美化">
+<meta property="article:tag" content="spaceship">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://kokona.zeabur.app/images/spaceship/2.1.png">
 
 
-<link rel="canonical" href="http://kokona.zeabur.app/tags/zsh/">
+<link rel="canonical" href="http://kokona.zeabur.app/2025/07/26/spaceship/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/zsh/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://kokona.zeabur.app/2025/07/26/spaceship/","path":"2025/07/26/spaceship/","title":"spaceship"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签: zsh | 春原ココナ的博客</title>
+<title>spaceship | 春原ココナ的博客</title>
   
 
 
@@ -140,7 +151,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -153,6 +164,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spaceship%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%BB%88%E7%AB%AF%E6%9B%B4%E5%A5%BD%E7%9C%8B%E8%80%90%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">Spaceship让你的终端更好看耐用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%A2%8E%E7%A2%8E%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">-1.碎碎念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E4%BA%BF%E7%82%B9%E5%B0%8F%E5%87%86%E5%A4%87"><span class="nav-number">1.2.</span> <span class="nav-text">0.亿点小准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BDoh-my-zsh"><span class="nav-number">1.2.1.</span> <span class="nav-text">卸载oh-my-zsh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85x-cmd"><span class="nav-number">1.2.2.</span> <span class="nav-text">安装x-cmd</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85Spaceship"><span class="nav-number">1.3.</span> <span class="nav-text">1.安装Spaceship</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%BB%93%E8%AF%AD"><span class="nav-number">1.4.</span> <span class="nav-text">2.结语</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -206,70 +218,135 @@
 
     </div>
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">zsh
-          <small>标签</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://kokona.zeabur.app/2025/07/26/spaceship/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="春原ココナ">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="春原ココナ的博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="spaceship | 春原ココナ的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          spaceship
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2025</span>
+
+      <time title="创建时间：2025-07-26 23:13:21 / 修改时间：23:38:11" itemprop="dateCreated datePublished" datetime="2025-07-26T23:13:21+08:00">2025-07-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">系统美化</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="Spaceship让你的终端更好看耐用"><a href="#Spaceship让你的终端更好看耐用" class="headerlink" title="Spaceship让你的终端更好看耐用"></a>Spaceship让你的终端更好看耐用</h1><blockquote>
+<p>目标：用Spaceship让你的终端好用到飞起</p>
+</blockquote>
+<hr>
+<h2 id="1-碎碎念"><a href="#1-碎碎念" class="headerlink" title="-1.碎碎念"></a>-1.碎碎念</h2><p>我的上一篇博客推荐了oh-my-zsh加上Powerlevel10k的美化教程，但是Powerlevel10k已经太久时间没有更新了，所以今天给大家带来由rust语言编写的高性能shell美化工具Spaceship</p>
+<hr>
+<h2 id="0-亿点小准备"><a href="#0-亿点小准备" class="headerlink" title="0.亿点小准备"></a>0.亿点小准备</h2><h3 id="卸载oh-my-zsh"><a href="#卸载oh-my-zsh" class="headerlink" title="卸载oh-my-zsh"></a>卸载oh-my-zsh</h3><p>在个人文件夹下找到一切有关oh-my-zsh和Powerlevel10k的文件夹，删掉！然后打开.zshrc，删去有关oh-my-zsh和Powerlevel10k的内容</p>
+<h3 id="安装x-cmd"><a href="#安装x-cmd" class="headerlink" title="安装x-cmd"></a>安装x-cmd</h3><p>X-CMD 是一款命令行工具，主要用于处理与系统安全相关的问题。它的主要功能包括：</p>
+<ol>
+<li><p>命令行处理器：类似于 Windows 的 cmd.exe，专为解决系统被 Hacker Defender 攻击的问题而设计。 </p>
+</li>
+<li><p>微控制器支持：作为一个易于移植的命令行工具，支持多种平台，如 Linux、STM32、ESP32 等。 </p>
+</li>
+<li><p>开源项目：基于 Posix Shell，旨在为用户提供一个功能强大、易于使用的终端环境。 </p>
+</li>
+<li><p>X-CMD 还提供了一系列增强功能，如脚本执行和交互式 CLI 工具，旨在提升用户体验。</p>
+</li>
+</ol>
+<p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(curl https://get.x-cmd.com)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="1-安装Spaceship"><a href="#1-安装Spaceship" class="headerlink" title="1.安装Spaceship"></a>1.安装Spaceship</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x starship</span><br></pre></td></tr></table></figure>
+
+<p>选择自己喜欢的主题，这里推荐gruvbox-rainbow，然后确认安装就完成了</p>
+<hr>
+<h2 id="2-结语"><a href="#2-结语" class="headerlink" title="2.结语"></a>2.结语</h2><p>是的，就是这么简单，最后享受自己的成果吧！</p>
+<p><img src="/../images/spaceship/2.1.png" alt="成果展示" title="成果展示"></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-07-26T23:13:21+08:00"
-              content="2025-07-26">
-          07-26
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/07/26/spaceship/" itemprop="url">
-            <span itemprop="name">spaceship</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+              <a href="/tags/%E7%BB%88%E7%AB%AF/" rel="tag"># 终端</a>
+              <a href="/tags/zsh/" rel="tag"># zsh</a>
+              <a href="/tags/%E7%BE%8E%E5%8C%96/" rel="tag"># 美化</a>
+              <a href="/tags/spaceship/" rel="tag"># spaceship</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/07/21/zsh-for-Linux/" rel="prev" title="zsh for Linux">
+                  <i class="fa fa-angle-left"></i> zsh for Linux
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-07-21T16:35:44+08:00"
-              content="2025-07-21">
-          07-21
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/07/21/zsh-for-Linux/" itemprop="url">
-            <span itemprop="name">zsh for Linux</span>
-          </a>
-      </div>
 
-      
-    </header>
-  </article>
 
-    </div>
-  </div>
-  
-  
-  
+
 
 </div>
   </main>
